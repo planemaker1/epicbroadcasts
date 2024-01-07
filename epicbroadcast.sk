@@ -1,0 +1,15 @@
+#==========================#
+#     Made by planemaker1
+#    discord.gg/u7jbzy82GD
+# Please dont steal the Skript
+#==========================#
+command /broadcast [<text>]:
+    aliases: bc
+    permission: bc.use
+    trigger:
+        if arg-1 is not set:
+            send "&c/broadcast [text]"
+        else:
+            broadcast "%nl%%nl%&c&lSERVER » &f%arg-1%%nl%%nl%"
+            loop all players:
+                play sound "ENTITY_EXPERIENCE_ORB_PICKUP" at loop-player
